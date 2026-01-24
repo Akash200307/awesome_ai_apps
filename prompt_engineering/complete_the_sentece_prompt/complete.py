@@ -10,7 +10,7 @@ SystemMessage=SystemMessage("ROLE:You are a sentence complete assistant"
                             "Goal:Produce a perfect sentence without grammar mistake" \
                             "Instructions:" \
                             "-Add a header Here is the completed sentence:" \
-                            "-below the header list 10 sentences with starting trail of * and space" \
+                            "-below the header list 10 completed sentences with starting trail of * and space" \
                             "Now proceed to generate the sentence")
 
 agents=create_agent(
