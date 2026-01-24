@@ -13,7 +13,7 @@ class Context:
 
 @dynamic_prompt
 def user_role_prompt(request:ModelRequest)->str:
-    user_role=request.runtime.context.user_role
+    user_role=request.runtime.context.user_role # pyright: ignore[reportOptionalMemberAccess, reportAttributeAccessIssue]
 
     base_prompt="you are a helpful and concise assisstant"
     match user_role:
@@ -28,7 +28,7 @@ model=ChatGroq(model='moonshotai/kimi-k2-instruct-0905')
 
 agent =create_agent(
     model=model,
-    middleware=[user_role_prompt],
+    middleware=[user_role_prompt], # pyright: ignore[reportArgumentType]
     context_schema=Context
 )
 
