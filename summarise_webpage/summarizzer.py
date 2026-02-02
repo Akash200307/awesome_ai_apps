@@ -29,7 +29,7 @@ def user_prompt(website):
 
 def create_ai():
    agent=create_agent(
-      model=ChatGroq(model="moonshotai/kimi-k2-instruct-0905"),
+      model=ChatGroq(model="moonshotai/kimi-k2-instruct"),
       system_prompt="You are an assistant that analyzes the contents of a website \
 and provides a short summary, ignoring text that might be navigation related. \
 Respond in markdown"
