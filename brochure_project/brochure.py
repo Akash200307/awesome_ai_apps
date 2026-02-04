@@ -58,6 +58,7 @@ Return ALL relevant links in JSON format.
 """
 
    )
+   
    return agent
 
 def get_links_user_prompt(url):
@@ -80,4 +81,8 @@ print(get_links_user_prompt("https://edwarddonner.com"))
 res=create_ai().invoke({
     "messages":[get_links_user_prompt("https://edwarddonner.com")]
 })
-print(res["messages"][-1].content)
+
+
+def create_brochure(url):
+    contents=fetch_web_contents(url)
+    links=fetch_links(url)
